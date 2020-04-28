@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test_RestApi.SampleDummyPost">
+      <class name="JsonDemo.TestLibrary2">
         <methods>
-          <include name="httpPostMethod"/>
+          <include name="testLibrary"/>
         </methods>
-      </class> <!-- test_RestApi.SampleDummyPost -->
+      </class> <!-- JsonDemo.TestLibrary2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

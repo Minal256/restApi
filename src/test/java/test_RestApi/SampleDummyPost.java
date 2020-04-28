@@ -8,8 +8,6 @@ import io.restassured.RestAssured;
 public class SampleDummyPost {
 
 	public static void main(String[] args) {
-		
-	
 //	public void httpPostMethod() {
 
 	    //Base URL
@@ -25,11 +23,15 @@ public class SampleDummyPost {
 
 
 	    //API Body
-	    String apiBody = "{\"name\":\"Minal Bhasme\",\"salary\":\"600000\",\"age\":\"26\"}";
+	    String apiBody = "{\"name\":\"Pooja\",\"salary\":\"1600000\",\"age\":\"27\"}";
 
-	    given().log().all().header("Content-Type", "application/json").body(apiBody)
+	    given().log().all().header("Content-Type", "application/json; charset=UTF-8").body(apiBody)
 	            .when().post(createUrl)
 	                    .then().log().all().assertThat().statusCode(200);
+	    
+	    given().log().all().header("Content-Type", "application/json")
+	    .when().get(getAllEmployeesUrl)
+	    .then().log().all().extract().response().asString();
 		}
 	}
 
