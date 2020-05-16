@@ -3,11 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="JsonDemo.TestLibrary2">
+      <class name="CookieBasedAuthetication.Test_JIRA2">
         <methods>
-          <include name="testLibrary"/>
+          <include name="addComment"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- JsonDemo.TestLibrary2 -->
+      </class> <!-- CookieBasedAuthetication.Test_JIRA2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

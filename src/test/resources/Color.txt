@@ -1,0 +1,6 @@
+      
+       String buttonColor = driver.findElement(By.name("submit")).getCssValue("background-color");
+       String buttonTextColor = driver.findElement(By.name("submit")).getCssValue("color");
+       System.out.println("Button color: " + buttonColor);
+	   System.out.println("Text color " + buttonTextColor);
+	

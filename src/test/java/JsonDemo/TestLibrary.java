@@ -33,7 +33,7 @@ public class TestLibrary {
 		System.out.println(actualID);  */
 		
 		String isbn = "Minal";
-		String aisle = "@1234";
+		String aisle = "1234";
 		String apiBody = String.format(AddBook.postPayload(), isbn,aisle );
 		
 	/*	String response = given().log().all().header("Content-Type", "application/json").body(AddBook.postPayload())
@@ -49,7 +49,7 @@ public class TestLibrary {
 
 		JsonPath js2 = new JsonPath(response);
 		String id = js2.getString("ID");
-		String actualID = id; //Minal@1234
+		String actualID = id; //Minal1234
 		System.out.println("Actual id is : "+ actualID);
 		
 		String expectedID = isbn+aisle;
@@ -81,9 +81,6 @@ public class TestLibrary {
 //				.then().log().all().statusCode(200).extract().body().asString();
 //				
 //	//	System.out.println("Delete response: "+delete_Response);	
-				
-				
-				
-				
+								
 	}
 }

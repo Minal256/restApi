@@ -10,6 +10,16 @@ public class AddBook2 {
 				"\"aisle\":\"%s\",\r\n" + 
 				"\"author\":\"John foe\"\r\n" + 
 				"}");
+		
+	}
+	
+	public static String getBook() {
+		return("{\r\n" + 
+				"      \"book_name\": \"Learn Rest Api using Postman\",\r\n" + 
+				"      \"isbn\": \"a23hd738\",\r\n" + 
+				"      \"aisle\": \"1223\"\r\n" + 
+				"   } \r\n" + 
+				"");
 	}
 
 }

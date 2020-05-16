@@ -12,14 +12,14 @@ public class AddBook {
 				"}");
 		}
 		
-		public static String getBook() {
-			return("{\r\n" + 
-					"      \"book_name\": \"Learn Appium Automation with Java\",\r\n" + 
-					"      \"isbn\": \"a23hd738\",\r\n" + 
-					"      \"aisle\": \"1223\"\r\n" + 
-					"   } \r\n" + 
-					"");
-		}
+//		public static String getBook() {
+//			return("{\r\n" + 
+//					"      \"book_name\": \"Learn Rest Api using Postman\",\r\n" + 
+//					"      \"isbn\": \"a23hd738\",\r\n" + 
+//					"      \"aisle\": \"1223\"\r\n" + 
+//					"   } \r\n" + 
+//					"");
+//		}
 
 //		public static String  deleteBook() {
 //			return "{\r\n" + 
