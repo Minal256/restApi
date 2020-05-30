@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="CookieBasedAuthetication.Test_JIRA2">
+      <class name="POJO_Assignment_30_5_20.TestLibrary_30_5_2020">
         <methods>
-          <include name="addComment"/>
+          <include name="addBook"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- CookieBasedAuthetication.Test_JIRA2 -->
+      </class> <!-- POJO_Assignment_30_5_20.TestLibrary_30_5_2020 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

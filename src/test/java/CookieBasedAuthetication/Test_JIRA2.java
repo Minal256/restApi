@@ -16,10 +16,11 @@ import io.restassured.path.json.JsonPath;
 
 	public class Test_JIRA2 {
 
-		String createSessionURI = "/rest/auth/1/session";
-		String createIssueURI = "/rest/api/2/issue";
-		String createAttachemntURI = "/rest/api/2/issue/%s/attachments";
-		String ADD_COMMENT = "/rest/api/2/issue/{key}/comment";
+		private String createSessionURI = "/rest/auth/1/session";
+		private String createIssueURI = "/rest/api/2/issue";
+		private String createAttachemntURI = "/rest/api/2/issue/%s/attachments";
+		private String ADD_COMMENT = "/rest/api/2/issue/{key}/comment";
+		private String ISSUE_DETAILS = "/rest/api/2/issue/{key}";
 
 		// Response Variables
 		String createSessionResponse;
@@ -101,6 +102,22 @@ import io.restassured.path.json.JsonPath;
 			.filter(sessionFilter)
 			.when().post(ADD_COMMENT)
 			.then().log().all();
+		}
+		
+		//---------------- field comment ------------------------//
+		@Test(priority = 5)
+		public void getSpecificDelaitsFromTicket() {
+			JsonPath js2 = new JsonPath(createIssueResponse);
+			
+			String getStorykey = js2.get("key");
+			System.out.println(getStorykey);
+			
+			given().log().all().filter(sessionFilter)
+			.queryParam("fields", "attachment")
+			.pathParam("key", getStorykey)
+			.when().get(ISSUE_DETAILS)
+			.then().log().all()
+			.assertThat().statusCode(200);
 		}
 
 	}
